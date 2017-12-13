@@ -5,9 +5,11 @@ _A jQuery plugin to make your table columns resizable_
 * Resize columns in table
 * Super Light: just 1kb
 
+[View a JsFiddle here](https://jsfiddle.net/jo_Geek/y1qa7hbr/)
+
 ## Invoking the plugin
 ```
-<table id="tbMarks">
+<table id="tbResizable">
   <thead>
     <tr>
       <th>col 1</th>
@@ -27,7 +29,7 @@ _A jQuery plugin to make your table columns resizable_
 </table>
 ```
 - invoke plugin on the above table
-> $('#tbMarksContainer').resizableColumns();
+> $('#tbResizable').resizableColumns();
 
 ## Important
 - Resizable handlers are `append()` to all the table `th`s.
