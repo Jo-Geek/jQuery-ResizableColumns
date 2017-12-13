@@ -26,7 +26,8 @@ _A jQuery plugin to make your table columns resizable_
   </tbody>
 </table>
 ```
-- invoke plugin on the above table - `$('#tbMarksContainer').resizableColumns();`
+- invoke plugin on the above table
+> $('#tbMarksContainer').resizableColumns();
 
 ## Important
 - Resizable handlers are `append()` to all the table `th`s.
