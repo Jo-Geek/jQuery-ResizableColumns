@@ -1,1 +1,269 @@
+<html>
+  <head>
+    <!-- HTML for code syntax highliting generated using hilite.me - http://hilite.me/ -->
+    <title>jQuery-resizableColumns : A jQuery plugin to resize table columns</title>
+    <!-- jQuery  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <!-- The plugin jQuery.resizableColumns -->
+    <script src="resizableColumns.min.js"></script>
+    <!-- simple-grid CSS from http://www.simplegrid.io/ -->
+    <link rel="stylesheet" href="simple-grid.css" />
+    <!-- Bootstrap 3 tooltip files -->
+    <script src="tooltip.js"></script>
+    <link rel="stylesheet" href="tooltip.css" />
+    <!-- Some custom styles I wrote :p -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Responsive viewport meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" content="A jQuery plugin to resize table columns." />
+    <meta name="Keywords" content="jQuery,plugin,table,html,js,jQuery plugin,fix header,header,footer,row,html5,js,javascript,fixed,columns,column,resize" />
+    <meta name="COPYRIGHT" content="Jo-Geek" />
+    <meta name="PUBLISHER" content="Jo-Geek" />
+    <meta content='jQuery-resizableColumns' property='og:title' />
+    <meta content='website' property='og:type' />
+    <meta content='https://jo-geek.github.io/jQuery-ResizableColumns/demo/' property='og:url' />
+    <meta content='https://css-art.blogspot.in/favicon.ico' property='og:image' />
+    <meta content='A jQuery plugin to resize table columns.' property='og:description' />
+    <meta content='jQuery-resizableColumns' property='og:site_name' />
+    <meta content='A jQuery plugin to resize table columns.' name='twitter:card' />
+    <meta content='jQuery-resizableColumns' name='twitter:title' />
+    <meta content='jQuery-resizableColumns' name='twitter:site' />
+    <meta content='Jo-Geek' name='twitter:creator' />
+    <meta name="google-site-verification" content="RbBs4xbbouNakhUoxkNbaVVRV2j2gGaeppaT7qMxPkA" />
+    <script>
+      $(document).ready(function() {
+          $('[data-toggle="tooltip"]').tooltip();
+          $('table.resizable').resizableColumns();
+      })
+      
+      function toggleProfile() {
+          if ($('#profile').height() == 0) {
+              $('#profile').height(285);
+          } else {
+              $('#profile').height(0);
+          }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="banner">
+      <a href="https://github.com/Jo-Geek/jQuery-ResizableColumns" target="_blank" class="github" data-toggle="tooltip" data-placement="left" title="Project on Github"><img src="res/github.png" /></a>
+      <h1>jQuery-resizableColumns</h1>
+      <p><em>A jQuery plugin to resize table columns</em></p>
+      <div class="bottom">Start resizing..!<a href="javascript:void(0);" onclick="toggleProfile();">@Jo-Geek</a></div>
+    </div>
+    <div class="profile center" id="profile">
+      <img src="res/me.jpg" />
+      <h3>Jones Vinoth Joseph</h3>
+      <div class="small">Developer - .Net(C#|VB), HTML, CSS, jQuery</div>
+      <div class="clear-10"></div>
+      <div class="clear-10"></div>
+      <a target="_blank" data-toggle="tooltip" data-placement="bottom" href="https://jvjoseph.blogspot.com/" title="My Blog">
+      <img src="res/blogger.png" />
+      </a>
+      <a target="_blank" data-toggle="tooltip" data-placement="bottom" href="https://css-art.blogspot.com/" title="CSS Art">
+      <img src="res/ca.jpg" />
+      </a>
+      <a target="_blank" data-toggle="tooltip" data-placement="bottom" href="http://stackoverflow.com/users/4084003/" title="Stack Overflow">
+      <img src="res/stackoverflow.png" />
+      </a>
+      <a target="_blank" data-toggle="tooltip" data-placement="bottom" href="https://in.linkedin.com/in/jonesvinothjoseph" title="Linkedin">
+      <img src="res/linkedin.ico" />
+      </a>
+      <a target="_blank" data-toggle="tooltip" data-placement="bottom" href="http://codepen.io/jo_Geek/" title="CodePen">
+      <img src="res/codepen.png" />
+      </a>
+      <a target="_blank" data-toggle="tooltip" data-placement="bottom" href="https://github.com/Jo-Geek/" title="Github">
+      <img src="res/github.png" />
+      </a>
+      <a target="_blank" data-toggle="tooltip" data-placement="bottom" href="mailto:jonesvinothjoseph@hotmail.com" title="Email">
+      <img src="res/mail.png" />
+      </a>
+      <a target="_blank" data-toggle="tooltip" data-placement="bottom" href="tel:+917045477607" title="Phone">
+      <img src="res/tel.png" />
+      </a>
+      <a target="_blank" data-toggle="tooltip" data-placement="bottom" href="https://facebook.com/jones.j.joe/" title="Facebook">
+      <img src="res/fb.png" />
+      </a>
+      <a target="_blank" data-toggle="tooltip" data-placement="bottom" href="https://twitter.com/jodegeek" title="Twitter">
+      <img src="res/twitter.png" />
+      </a>
+      <a target="_blank" data-toggle="tooltip" data-placement="bottom" href="https://plus.google.com/+JonesJosephjvj" title="Google plus">
+      <img src="res/gplus.png" />
+      </a>
+    </div>
+    <div class="container">
+    <div class="row">
+      <div class="col-2 side">
+        <a href="https://github.com/Jo-Geek/jQuery-FixTableHeader" target="_blank">Github</a>
+        <a href="../license.html" target="_blank">License</a>
+      </div>
+      <div class="col-10 side-right">
+        <div class="row">
+          <div class="col-6">
+            <div id="left-fixedHeader" class="section">
+              <h3>Fixed header<small> (This is the default mode, keeps header row fixed)</small></h3>
+              <div class="clear-10"></div>
+              Example on the right shows a demo of a single row fixed as header.
+              <div class="clear-10"></div>
+              <div class="code">
+                <div class="header">
+                  HTML
+                </div>
+                <pre style="margin: 0; line-height: 125%"><span style="color: #062873; font-weight: bold">&lt;table</span> <span style="color: #4070a0">class=&quot;resizable&quot;</span><span style="color: #062873; font-weight: bold">&gt;</span>
+  <span style="color: #062873; font-weight: bold">&lt;thead&gt;</span>
+    <span style="color: #062873; font-weight: bold">&lt;tr&gt;</span>
+      <span style="color: #062873; font-weight: bold">&lt;th&gt;</span>col 1<span style="color: #062873; font-weight: bold">&lt;/th&gt;</span>
+      <span style="color: #062873; font-weight: bold">&lt;th&gt;</span>col 2<span style="color: #062873; font-weight: bold">&lt;/th&gt;</span>
+	  ...
+    <span style="color: #062873; font-weight: bold">&lt;/tr&gt;</span>
+  <span style="color: #062873; font-weight: bold">&lt;/thead&gt;</span>
 
+  <span style="color: #062873; font-weight: bold">&lt;tbody&gt;</span>
+    <span style="color: #062873; font-weight: bold">&lt;tr&gt;</span>
+      <span style="color: #062873; font-weight: bold">&lt;td&gt;</span>Column 1<span style="color: #062873; font-weight: bold">&lt;/td&gt;</span>
+      <span style="color: #062873; font-weight: bold">&lt;td&gt;</span>Column 2<span style="color: #062873; font-weight: bold">&lt;/td&gt;</span>
+      ...
+    <span style="color: #062873; font-weight: bold">&lt;/tr&gt;</span>
+  <span style="color: #062873; font-weight: bold">&lt;/tbody&gt;</span>
+<span style="color: #062873; font-weight: bold">&lt;/table&gt;</span>
+</pre>
+              </div>
+              <div class="clear-5"></div>
+              <div class="code">
+                <div class="header">jQuery</div>
+                <div>$(<span style="color: #0000FF">&#39;table.resizable&#39;</span>).resizableColumns();</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="section">
+              <table class="rezisable">
+                <thead>
+                  <tr>
+                    <th>Subject</th>
+                    <th>Sem1</th>
+                    <th>Sem2</th>
+                    <th>Total</th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr>
+                    <td>Total</td>
+                    <td class="right">1243</td>
+                    <td class="right">1143</td>
+                    <td class="right">2386</td>
+                  </tr>
+                </tfoot>
+                <tbody>
+                  <tr>
+                    <td>Physics-1</td>
+                    <td class="right">67</td>
+                    <td class="right">78</td>
+                    <td class="right">145</td>
+                  </tr>
+                  <tr>
+                    <td>Physics-2</td>
+                    <td class="right">76</td>
+                    <td class="right">56</td>
+                    <td class="right">132</td>
+                  </tr>
+                  <tr>
+                    <td>Physics-3</td>
+                    <td class="right">56</td>
+                    <td class="right">67</td>
+                    <td class="right">123</td>
+                  </tr>
+                  <tr>
+                    <td>Physics-4</td>
+                    <td class="right">92</td>
+                    <td class="right">34</td>
+                    <td class="right">126</td>
+                  </tr>
+                  <tr>
+                    <td>Physics-5</td>
+                    <td class="right">76</td>
+                    <td class="right">35</td>
+                    <td class="right">111</td>
+                  </tr>
+                  <tr>
+                    <td>Physics-6</td>
+                    <td class="right">43</td>
+                    <td class="right">65</td>
+                    <td class="right">108</td>
+                  </tr>
+                  <tr>
+                    <td>Physics-7</td>
+                    <td class="right">43</td>
+                    <td class="right">65</td>
+                    <td class="right">108</td>
+                  </tr>
+                  <tr>
+                    <td>Physics-8</td>
+                    <td class="right">43</td>
+                    <td class="right">65</td>
+                    <td class="right">108</td>
+                  </tr>
+                  <tr>
+                    <td>Physics-9</td>
+                    <td class="right">43</td>
+                    <td class="right">65</td>
+                    <td class="right">108</td>
+                  </tr>
+                  <tr>
+                    <td>Maths-1</td>
+                    <td class="right">64</td>
+                    <td class="right">47</td>
+                    <td class="right">111</td>
+                  </tr>
+                  <tr>
+                    <td>Maths-2</td>
+                    <td class="right">98</td>
+                    <td class="right">79</td>
+                    <td class="right">177</td>
+                  </tr>
+                  <tr>
+                    <td>Maths-3</td>
+                    <td class="right">78</td>
+                    <td class="right">67</td>
+                    <td class="right">145</td>
+                  </tr>
+                  <tr>
+                    <td>Maths-4</td>
+                    <td class="right">67</td>
+                    <td class="right">54</td>
+                    <td class="right">121</td>
+                  </tr>
+                  <tr>
+                    <td>Maths-5</td>
+                    <td class="right">86</td>
+                    <td class="right">98</td>
+                    <td class="right">184</td>
+                  </tr>
+                  <tr>
+                    <td>Maths-6</td>
+                    <td class="right">79</td>
+                    <td class="right">54</td>
+                    <td class="right">133</td>
+                  </tr>
+                  <tr>
+                    <td>Maths-7</td>
+                    <td class="right">79</td>
+                    <td class="right">54</td>
+                    <td class="right">133</td>
+                  </tr>
+                  <tr>
+                    <td>Maths-8</td>
+                    <td class="right">79</td>
+                    <td class="right">54</td>
+                    <td class="right">133</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
