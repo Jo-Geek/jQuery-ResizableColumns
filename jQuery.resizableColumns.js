@@ -9,7 +9,7 @@
       _thead.find('th:not(:last-child)').each(function() {
         $(this).css('position', 'relative');
         $(this).css('width', $(this).width() + 'px');
-        $(this).append("<div class='resizer' style='position:absolute;top:0px;right:-1px;bottom:0px;width:4px;background:transparent;cursor:col-resize'></div>");
+        $(this).append("<div class='resizer' style='position:absolute;top:0px;right:-3px;bottom:0px;width:6px;z-index:999;background:transparent;cursor:col-resize'></div>");
       })
 
       $(document).mouseup(function(e) {
