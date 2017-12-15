@@ -5,11 +5,11 @@
       var _table = $(this);
       var _thead = $(this).find('thead');
 
-      _table.css('width', _table.width());
-      _thead.find('th:not(:last-child)').each(function() {
+      _table.innerWidth(_table.innerWidth());
+      _thead.find('th').each(function() {
         $(this).css('position', 'relative');
-        $(this).css('width', $(this).width() + 'px');
-        $(this).append("<div class='resizer' style='position:absolute;top:0px;right:-3px;bottom:0px;width:6px;z-index:999;background:transparent;cursor:col-resize'></div>");
+        $(this).innerWidth($(this).innerWidth());
+        if ($(this).is(':not(:last-child)')) $(this).append("<div class='resizer' style='position:absolute;top:0px;right:-3px;bottom:0px;width:6px;z-index:999;background:transparent;cursor:col-resize'></div>");
       })
 
       $(document).mouseup(function(e) {
@@ -36,12 +36,12 @@
             var _nextRow = _thead.find('th.resizing + th');
             var _pageX = e.pageX || 0;
             var _widthDiff = _pageX - resizingPosX;
-            var _setWidth = _resizing.closest('th').width() + _widthDiff;
-            var _nextRowWidth = _nextRow.width() - _widthDiff;
+            var _setWidth = _resizing.closest('th').innerWidth() + _widthDiff;
+            var _nextRowWidth = _nextRow.innerWidth() - _widthDiff;
             if (resizingPosX != 0 && _widthDiff != 0 && _setWidth > 50 && _nextRowWidth > 50) {
-              _resizing.closest('th').css('width', _setWidth + 'px');
+              _resizing.closest('th').innerWidth(_setWidth);
               resizingPosX = e.pageX;
-              _nextRow.css('width', _nextRowWidth + 'px');
+              _nextRow.innerWidth(_nextRowWidth);
             }
 
           }
