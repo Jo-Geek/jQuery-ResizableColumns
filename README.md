@@ -1,7 +1,11 @@
 # jQuery-ResizableColumns
 _A jQuery plugin to make your table columns resizable_
 
-#### jQuery.fixTableHeader.js
+
+#### Update v1.1.0
+* Works with two rows in `<thead>` tag. Resizing is applied only to the first header row.
+
+#### jQuery.fixTableHeader v1.0.0
 * Resize columns in table
 * Super Light: just 0.9kb
 
