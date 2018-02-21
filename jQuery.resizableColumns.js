@@ -20,7 +20,7 @@
 
       _table.find('.resizer').mousedown(function(e) {
         _thead.find('th').removeClass('resizing');
-        $(this).closest('th').addClass('resizing');
+        $(_thead).find('tr:first-child th:nth-child(' + ($(this).closest('th').index() + 1) + ') .resizer').closest('th').addClass('resizing');
         resizingPosX = e.pageX;
         isColResizing = true;
         e.stopPropagation();
@@ -30,9 +30,7 @@
         if (isColResizing) {
 
           var _resizing = _thead.find('th.resizing .resizer');
-
           if (_resizing.length == 1) {
-
             var _nextRow = _thead.find('th.resizing + th');
             var _pageX = e.pageX || 0;
             var _widthDiff = _pageX - resizingPosX;
@@ -43,7 +41,6 @@
               resizingPosX = e.pageX;
               _nextRow.innerWidth(_nextRowWidth);
             }
-
           }
         }
       })
