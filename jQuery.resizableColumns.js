@@ -4,7 +4,7 @@
       var resizingPosX = 0;
       var _table = $(this);
 
-      var _thead = $(this).find('thead');
+      var _thead = $(this).find('thead').first();
         
       _thead.find('th').each(function() {
         $(this).css('position', 'relative');
