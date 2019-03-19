@@ -3,12 +3,11 @@
       var isColResizing = false;
       var resizingPosX = 0;
       var _table = $(this);
-      var _thead = $(this).find('thead').first();
 
-      _table.innerWidth(_table.innerWidth());
+      var _thead = $(this).find('thead');
+        
       _thead.find('th').each(function() {
         $(this).css('position', 'relative');
-        $(this).innerWidth($(this).innerWidth());
         if ($(this).is(':not(:last-child)')) $(this).append("<div class='resizer' style='position:absolute;top:0px;right:-3px;bottom:0px;width:6px;z-index:999;background:transparent;cursor:col-resize'></div>");
       })
 
