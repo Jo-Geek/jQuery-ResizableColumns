@@ -3,7 +3,7 @@
       var isColResizing = false;
       var resizingPosX = 0;
       var _table = $(this);
-      var _thead = $(this).find('thead');
+      var _thead = $(this).find('thead').first();
 
       _table.innerWidth(_table.innerWidth());
       _thead.find('th').each(function() {
