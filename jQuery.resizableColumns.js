@@ -18,11 +18,15 @@
       })
 
       _table.find('.resizer').mousedown(function(e) {
+        if (e.button == 0) {
         _thead.find('th').removeClass('resizing');
         $(_thead).find('tr:first-child th:nth-child(' + ($(this).closest('th').index() + 1) + ') .resizer').closest('th').addClass('resizing');
         resizingPosX = e.pageX;
         isColResizing = true;
+        }
         e.stopPropagation();
+      }).click(function(e) {
+        return false;
       })
 
       _table.mousemove(function(e) {
